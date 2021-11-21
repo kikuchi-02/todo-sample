@@ -1,9 +1,10 @@
 <template>
-  <div id="app">
+  <v-app id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/todo">Todo</router-link>
+      <router-link to="/todo">Todo</router-link> |
+      <router-link to="/dialogs">Dialog</router-link>
     </div>
     <div class="login-wrapper">
       <router-link v-if="!$store.state.login.isAdmin" to="/login"
@@ -15,7 +16,7 @@
       <router-view />
     </transition>
     <snackbar></snackbar>
-  </div>
+  </v-app>
 </template>
 
 <script lang="ts">
